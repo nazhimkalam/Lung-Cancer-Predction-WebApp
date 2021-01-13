@@ -1,0 +1,31 @@
+.predictionSection > form {
+	display: flex;
+	margin: 20px;
+	width: 600px;
+	justify-content: space-around;
+}
+.predictionSection__right > p,
+.predictionSection__left > p {
+	display: flex;
+	padding: 5px;
+	justify-content: space-between;
+}
+
+input {
+	width: 50px;
+	margin-left: 10px;
+}
+.predictionSection__predictBTN {
+	width: 100px;
+	font-size: 15px;
+	padding: 5px;
+	margin: 20px 0;
+	float: right;
+	background-color: rgb(185, 0, 0);
+    outline: none;
+    border-radius: 5px;
+    border: 2px red solid;
+    cursor: pointer;
+	color: white;
+	font-weight: 600;
+}

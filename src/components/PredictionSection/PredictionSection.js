@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import "./PredictionSection.css"
+import { useState } from 'react';
+import './PredictionSection.css';
 
 function PredictionSection() {
-    const [result, setResult] = useState('');
+	const [result, setResult] = useState('');
 	const [age, setAge] = useState(0);
 	const [gender, setGender] = useState(0);
 	const [airPollution, setAirPollution] = useState(0);
@@ -67,164 +67,161 @@ function PredictionSection() {
 			.then((result) => setResult(result.Prediction));
 	};
 
-    return (
-        <div>
-            <form>
-				<p>
-					Age: <input name="age" value={age} type="number" onChange={(e) => setAge(e.target.value)} />
-				</p>
-				<p>
-					Gender: <input name="gender" value={gender} onChange={(e) => setGender(e.target.value)} type="number" />
-				</p>
-				<p>
-					Air Pollution:{' '}
-					<input
-						name="airPollution"
-						value={airPollution}
-						onChange={(e) => setAirPollution(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Alcohol Use:{' '}
-					<input name="alcoholUse" value={alcoholUse} onChange={(e) => setAlcoholUse(e.target.value)} type="number" />
-				</p>
-				<p>
-					Dust Allergy:{' '}
-					<input
-						name="dustAllergy"
-						value={dustAllergy}
-						onChange={(e) => setDustAllergy(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Occupational Hazards:{' '}
-					<input
-						name="occupationalHazards"
-						value={occupationalHazards}
-						onChange={(e) => setOccupationalHazards(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Genetic Risk:{' '}
-					<input
-						name="geneticRisk"
-						value={geneticRisk}
-						onChange={(e) => setGeneticRisk(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Chronic Lung Disease:{' '}
-					<input
-						name="chronicLungDisease"
-						value={chronicLungDisease}
-						onChange={(e) => setChronicLungDisease(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Balanced Diet:{' '}
-					<input
-						name="balancedDiet"
-						value={balancedDiet}
-						onChange={(e) => setBalancedDiet(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Obesity: <input name="obesity" value={obesity} onChange={(e) => setObesity(e.target.value)} type="number" />
-				</p>
-				<p>
-					Smoking: <input name="smoking" value={smoking} onChange={(e) => setSmoking(e.target.value)} type="number" />
-				</p>
-				<p>
-					Passive Smoker:{' '}
-					<input
-						name="passiveSmoker"
-						value={passiveSmoker}
-						onChange={(e) => setPassiveSmoker(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Chest Pain:{' '}
-					<input name="chestPain" value={chestPain} onChange={(e) => setChestPain(e.target.value)} type="number" />
-				</p>
-				<p>
-					Coughing of Blood:{' '}
-					<input
-						name="coughingOfBlood"
-						value={coughingOfBlood}
-						onChange={(e) => setCoughingOfBlood(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Fatigue: <input name="fatigue" type="number" value={fatigue} onChange={(e) => setFatigue(e.target.value)} />
-				</p>
-				<p>
-					Weight Loss:{' '}
-					<input name="weightLoss" type="number" value={weightLoss} onChange={(e) => setWeightLoss(e.target.value)} />
-				</p>
-				<p>
-					Shortness of Breath:{' '}
-					<input
-						name="shortnessOfBreath"
-						type="number"
-						value={shortnessOfBreath}
-						onChange={(e) => setShortnessOfBreath(e.target.value)}
-					/>
-				</p>
-				<p>
-					Wheezing:{' '}
-					<input name="wheezing" value={wheezing} onChange={(e) => setWheezing(e.target.value)} type="number" />
-				</p>
-				<p>
-					Swallowing Difficulty:{' '}
-					<input
-						name="swallowingDifficulty"
-						value={swallowingDifficulty}
-						onChange={(e) => setSwallowingDifficulty(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Clubbing of Finger Nails:{' '}
-					<input
-						name="clubbingOfFingerNails"
-						value={clubbingOfFingerNails}
-						onChange={(e) => setClubbingOfFingerNails(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Frequent Cold:{' '}
-					<input
-						name="frequentCold"
-						value={frequentCold}
-						onChange={(e) => setFrequentCold(e.target.value)}
-						type="number"
-					/>
-				</p>
-				<p>
-					Dry Cough:{' '}
-					<input name="dryCough" value={dryCough} onChange={(e) => setDryCough(e.target.value)} type="number" />
-				</p>
-				<p>
-					Snoring: <input name="snoring" type="number" value={snoring} onChange={(e) => setSnoring(e.target.value)} />
-				</p>
-				<button type="submit" className="app__predictButton" onClick={submitResponse}>
-					Predict
-				</button>
-			</form>
+	return (
+		<div className="predictionSection">
+			<div className="predictionSection__range"></div>
 
 			{/* result */}
 			{result && <h3>Result: {result}</h3>}
-        </div>
-    )
+
+			<form>
+				<div className="predictionSection__left">
+					<p>
+						Age: <input size="2" value={age} type="number" onChange={(e) => setAge(e.target.value)} />
+					</p>
+					<p>
+						Gender: <input name="gender" value={gender} onChange={(e) => setGender(e.target.value)} type="number" />
+					</p>
+					<p>
+						Air Pollution:{' '}
+						<input
+							name="airPollution"
+							value={airPollution}
+							onChange={(e) => setAirPollution(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Alcohol Use:{' '}
+						<input name="alcoholUse" value={alcoholUse} onChange={(e) => setAlcoholUse(e.target.value)} type="number" />
+					</p>
+					<p>
+						Dust Allergy:{' '}
+						<input
+							name="dustAllergy"
+							value={dustAllergy}
+							onChange={(e) => setDustAllergy(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Occupational Hazards:{' '}
+						<input
+							name="occupationalHazards"
+							value={occupationalHazards}
+							onChange={(e) => setOccupationalHazards(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Genetic Risk:{' '}
+						<input
+							name="geneticRisk"
+							value={geneticRisk}
+							onChange={(e) => setGeneticRisk(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Chronic Lung Disease:{' '}
+						<input
+							name="chronicLungDisease"
+							value={chronicLungDisease}
+							onChange={(e) => setChronicLungDisease(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Balanced Diet:{' '}
+						<input
+							name="balancedDiet"
+							value={balancedDiet}
+							onChange={(e) => setBalancedDiet(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Obesity: <input name="obesity" value={obesity} onChange={(e) => setObesity(e.target.value)} type="number" />
+					</p>
+					<p>
+						Smoking: <input name="smoking" value={smoking} onChange={(e) => setSmoking(e.target.value)} type="number" />
+					</p>
+					<p>
+						Chest Pain:{' '}
+						<input name="chestPain" value={chestPain} onChange={(e) => setChestPain(e.target.value)} type="number" />
+					</p>
+				</div>
+				<div className="predictionSection__right">
+					<p>
+						Coughing of Blood:{' '}
+						<input
+							name="coughingOfBlood"
+							value={coughingOfBlood}
+							onChange={(e) => setCoughingOfBlood(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Fatigue: <input name="fatigue" type="number" value={fatigue} onChange={(e) => setFatigue(e.target.value)} />
+					</p>
+					<p>
+						Weight Loss:{' '}
+						<input name="weightLoss" type="number" value={weightLoss} onChange={(e) => setWeightLoss(e.target.value)} />
+					</p>
+					<p>
+						Shortness of Breath:{' '}
+						<input
+							name="shortnessOfBreath"
+							type="number"
+							value={shortnessOfBreath}
+							onChange={(e) => setShortnessOfBreath(e.target.value)}
+						/>
+					</p>
+					<p>
+						Wheezing:{' '}
+						<input name="wheezing" value={wheezing} onChange={(e) => setWheezing(e.target.value)} type="number" />
+					</p>
+					<p>
+						Swallowing Difficulty:{' '}
+						<input
+							name="swallowingDifficulty"
+							value={swallowingDifficulty}
+							onChange={(e) => setSwallowingDifficulty(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Clubbing of Finger Nails:{' '}
+						<input
+							name="clubbingOfFingerNails"
+							value={clubbingOfFingerNails}
+							onChange={(e) => setClubbingOfFingerNails(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Frequent Cold:{' '}
+						<input
+							name="frequentCold"
+							value={frequentCold}
+							onChange={(e) => setFrequentCold(e.target.value)}
+							type="number"
+						/>
+					</p>
+					<p>
+						Dry Cough:{' '}
+						<input name="dryCough" value={dryCough} onChange={(e) => setDryCough(e.target.value)} type="number" />
+					</p>
+					<p>
+						Snoring: <input name="snoring" type="number" value={snoring} onChange={(e) => setSnoring(e.target.value)} />
+					</p>
+					<button type="submit" className="predictionSection__predictBTN" onClick={submitResponse}>
+						PREDICT
+					</button>
+				</div>
+			</form>
+		</div>
+	);
 }
 
-export default PredictionSection
+export default PredictionSection;
