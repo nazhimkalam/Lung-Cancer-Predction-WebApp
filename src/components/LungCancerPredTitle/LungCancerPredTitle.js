@@ -1,13 +1,14 @@
-import "./LungCancerPredTitle.css"
-
+import './LungCancerPredTitle.css';
 
 function LungCancerPredTitle() {
-    return (
-        <div>
-            <h2>Lung Cancer Prediction</h2>
-			<p>How it works - Just fill all the fields and hit the predict button</p>
-        </div>
-    )
+	return (
+		<div className="lungCancerPredictionTitle">
+			<h2>LUNG CANCER PREDICTION</h2>
+			<p>
+				<span>How it works :</span> Just fill all the fields and hit the PREDICT button
+			</p>
+		</div>
+	);
 }
 
-export default LungCancerPredTitle
+export default LungCancerPredTitle;
