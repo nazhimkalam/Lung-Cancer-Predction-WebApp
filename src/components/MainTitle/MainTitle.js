@@ -1,9 +1,9 @@
-import React from 'react';
+import "./MainTitle.css"
 
 function MainTitle() {
 	return (
 		<div className="mainTitle">
-			<h1>Lung Cancer</h1>
+			<h1>LUNG CANCER</h1>
 		</div>
 	);
 }

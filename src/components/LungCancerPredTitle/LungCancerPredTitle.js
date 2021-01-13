@@ -1,4 +1,5 @@
-import React from 'react'
+import "./LungCancerPredTitle.css"
+
 
 function LungCancerPredTitle() {
     return (
