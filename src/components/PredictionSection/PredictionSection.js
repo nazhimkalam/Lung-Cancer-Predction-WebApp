@@ -69,11 +69,29 @@ function PredictionSection() {
 
 	return (
 		<div className="predictionSection">
-			<div className="predictionSection__range"></div>
+			<div className="predictionSection__range">
+				<p>Value input Range (1-10)</p>
+				<div className="predictionSection__rule">
+					<p>1 - giving the least importance</p>
+					<p>10 - giving the most importance</p>
+				</div>
+
+				<div className="predictionSection__rangeScores">
+					<p>1 - Not at all</p>
+					<p>2, 3 - Mild</p>
+					<p>4, 5 - Moderate</p>
+					<p>6 - Severe</p>
+					<p>7, 8 - Very Severe</p>
+					<p>9, 10 - Worst as Possible</p>
+				</div>
+			</div>
 
 			{/* result */}
-			{result && <h3>Result: {result}</h3>}
-
+			{result && (
+				<div className="predictionSection__result">
+					<h3>prediction: {result}</h3>
+				</div>
+			)}
 			<form>
 				<div className="predictionSection__left">
 					<p>
