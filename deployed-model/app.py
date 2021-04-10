@@ -8,13 +8,12 @@
 # In[5]:
 
 
+import joblib
+import numpy as np
 # Make sure that all the following modules are already installed for use.
 from flask import Flask
 from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
-import joblib
-import numpy as np
-
 
 # ### Creating an instance of the flask app and an API
 
@@ -86,7 +85,7 @@ class Predict(Resource):
 API.add_resource(Predict, '/predict')
 
 if __name__ == '__main__':
-    APP.run(debug=True, port=1080)
+    APP.run(debug=True)
 
 
 # ### Using the request module by first defining the URL to access and the body to send along with our HTTP request

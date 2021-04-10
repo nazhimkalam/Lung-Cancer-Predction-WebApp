@@ -4,3 +4,6 @@
 
 ## Run the backend using the following code in the CMD
         python app.py
+
+## Final Web Application link
+(lung cancer predictor)[https://lung-cancer-prognosis.web.app/]
