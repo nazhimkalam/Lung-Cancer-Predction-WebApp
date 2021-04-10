@@ -6,4 +6,4 @@
         python app.py
 
 ## Final Web Application link
-(https://lung-cancer-prognosis.web.app/)[lung cancer predictor]
+https://lung-cancer-prognosis.web.app/
